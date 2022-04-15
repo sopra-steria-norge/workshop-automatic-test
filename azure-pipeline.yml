@@ -1,0 +1,15 @@
+# https://developercommunity.visualstudio.com/t/azure-pipelinesyml-not-creating-pipeline-automatic/1129219
+
+name: $(Date:yyyyMMdd)$(Rev:.r)
+
+# Load secrets from Library and the Key Vault
+variables:
+  - group: workshop-automatic-test
+
+trigger:
+  branches:
+    include:
+    - master
+
+steps:
+- script: ls '$(System.DefaultWorkingDirectory)'
