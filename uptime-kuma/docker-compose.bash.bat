@@ -1,0 +1,1 @@
+docker exec -it uptime-kuma-1 /bin/bash

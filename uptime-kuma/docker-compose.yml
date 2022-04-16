@@ -1,0 +1,29 @@
+# Simple docker-composer.yml
+# You can change your port or volume location
+
+version: '3.3'
+
+services:
+  uptime-kuma:
+    # image: louislam/uptime-kuma
+    image: geircode/louislam-uptime-kuma:${UPTIME_IMAGE_TAG:-latest}
+    # image: geircode/louislam-uptime-kuma:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: uptime-kuma-${UPTIME_IMAGE_TAG:-latest}-1
+    # volumes:
+    #   - uptime_kuma_app_data:/home/data
+    environment:
+      - DATA_DIR=/uptime
+    ports:
+      - ${UPTIME_PORT:-3002}:80
+    networks:
+      - uptime_common_network
+
+networks:
+  uptime_common_network:
+    name: uptime_common_network
+    external: true
+# volumes:
+#   uptime_kuma_app_data: {}
