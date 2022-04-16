@@ -24,4 +24,4 @@ docker network create -d overlay --attachable uptime_common_network
 docker-compose -f docker-compose.yml up -d
 REM wait for 1-2 seconds for the container to start
 pause
-docker exec -it uptime-kuma-1 /bin/bash
+docker exec -it uptime-kuma-latest-1 /bin/bash

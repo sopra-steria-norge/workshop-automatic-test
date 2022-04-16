@@ -1,1 +1,1 @@
-docker exec -it uptime-kuma-1 /bin/bash
+docker exec -it uptime-kuma-latest-1 /bin/bash

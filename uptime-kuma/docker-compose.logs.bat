@@ -1,2 +1,2 @@
-docker logs -f uptime-kuma-1
+docker logs -f uptime-kuma-latest-1
 pause

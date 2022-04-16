@@ -16,6 +16,7 @@ services:
     #   - uptime_kuma_app_data:/home/data
     environment:
       - DATA_DIR=/uptime
+      - UPTIME_KUMA_PORT=80
     ports:
       - ${UPTIME_PORT:-3002}:80
     networks:
