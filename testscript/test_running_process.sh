@@ -6,7 +6,8 @@ echo $status
 
 if echo "$status" | grep -q 200
 then
-  # Send failed status to Uptime
+  # Send OK pulse status to Uptime
   echo "Sending OK"
-  status=$(curl -L -s --head -w %{http_code} https://uptime-app.azurewebsites.net/api/push/VpbyW98MKX\?msg=OK\&ping= -o /dev/null)
+  status=$(curl -L -s -w %{http_code} https://uptime-app.azurewebsites.net/api/push/VpbyW98MKX\?msg=OK\&ping= -o /dev/null)
+  echo "Sending status:" $status
 fi
