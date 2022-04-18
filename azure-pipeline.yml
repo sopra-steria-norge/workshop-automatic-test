@@ -13,3 +13,7 @@ trigger:
 
 steps:
 - script: ls '$(System.DefaultWorkingDirectory)'
+
+- script: |
+    bash testscript/test_running_process.sh
+  displayName: Check Uptime status
