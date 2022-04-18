@@ -3,8 +3,18 @@ name: $(Date:yyyyMMdd)$(Rev:.r)
 trigger:
   branches:
     include:
-    - master
+    - main
 
+    # https://crontab.guru/#*/30_*_*_*_*
+schedules:
+  - cron: "*/30 * * * *"
+    displayName: At every 30th minute
+    branches:
+      include:
+        - main
+    always: true
+
+    
 steps:
 - script: ls '$(System.DefaultWorkingDirectory)'
 
