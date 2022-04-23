@@ -2,6 +2,10 @@
 
 Workshop som bruker Azure DevOps Pipeline og Uptime Kuma til å lage automatisk monitorering
 
+Vi skal bruke Azure DevOps til å kjøre et script som oppdaterer [Uptime Kuma]( https://github.com/louislam/uptime-kuma) som er en monitortjeneste.
+
+![image-20220419115015924](wiki/images/image-20220419115015924.png)
+
 ## Legg til en pipeline i Azure DevOps
 
 ### Mål
@@ -11,11 +15,6 @@ I denne workshoppen skal vi legge til en pipeline som kjører noen tester automa
 ### Hvorfor
 
 Dette viser hvordan du kan enkelt komme i gang med å bruke en CI/CD pipeline til å sette i gang testscript som tester en tjeneste. Denne pipelinen vil kjøre jevnlig, men også ved hver endring i testen som blir lagret.
-
-
-![image-20220419115015924](wiki/images/image-20220419115015924.png)
-
-Vi skal bruker Azure DevOps til å kjøre et script som oppdaterer  [Uptime]( https://github.com/louislam/uptime-kuma) som er en monitortjeneste.
 
 **Steg 1 - Logg inn i Azure DevOps**
 
@@ -66,7 +65,7 @@ Denne tekskten viser at Uptime er responsiv og sender melding til Uptime at den 
 
 ![image-20220419114517345](wiki/images/image-20220419114517345.png)
 
-Denne monitoren viser at status er OK.
+Denne monitoren viser at status er **OK**.
 
 
 
